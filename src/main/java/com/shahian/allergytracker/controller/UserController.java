@@ -48,7 +48,6 @@ public class UserController {
     }
     @GetMapping("/v1/foodInquiryUser")
     public ResponseEntity<?> userFoodInquiry(@RequestParam Long userId) {
-
         List<Allergy> allergicFoods = userService.getAllergies(userId);
         List<Substitute> suggestedSubstitutes = userService.suggestSubstitutes(userId);
         Map<String, Object> response = new HashMap<>();
